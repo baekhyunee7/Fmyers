@@ -1,5 +1,5 @@
 [package]
-name = "Fmyers"
+name = "fmyers"
 version = "0.1.0"
 authors = ["baekhyun <543683487@qq.com>"]
 edition = "2018"
@@ -7,3 +7,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[[bin]]
+name = "example"
+path = "examples/example.rs"

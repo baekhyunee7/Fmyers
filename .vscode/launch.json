@@ -7,17 +7,91 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'Fmyers'",
+            "name": "Debug unit tests in library 'fmyers'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=Fmyers"
+                    "--package=fmyers"
                 ],
                 "filter": {
-                    "name": "Fmyers",
+                    "name": "fmyers",
                     "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'example'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=example",
+                    "--package=fmyers"
+                ],
+                "filter": {
+                    "name": "example",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'example'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=example",
+                    "--package=fmyers"
+                ],
+                "filter": {
+                    "name": "example",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'example'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=example",
+                    "--package=fmyers"
+                ],
+                "filter": {
+                    "name": "example",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'example'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=example",
+                    "--package=fmyers"
+                ],
+                "filter": {
+                    "name": "example",
+                    "kind": "example"
                 }
             },
             "args": [],
@@ -32,7 +106,7 @@
                     "test",
                     "--no-run",
                     "--test=test",
-                    "--package=Fmyers"
+                    "--package=fmyers"
                 ],
                 "filter": {
                     "name": "test",
