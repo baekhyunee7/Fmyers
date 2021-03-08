@@ -1,7 +1,8 @@
-use fmyers::myers;
+use fmyers::{myers,DiffOp};
 
 fn main(){
-    let a = "ab";
-    let b = "b";
-    myers(a.as_bytes(),b.as_bytes());
+    let a = "abcabba";
+    let b = "cbabac";
+    let res = myers(a.as_bytes(),b.as_bytes());
+    println!("{:?}",res);
 }
