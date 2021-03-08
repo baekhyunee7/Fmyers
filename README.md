@@ -1,6 +1,6 @@
 # Fmyers
 
-* myers() return Vec<DiffOp>
+* myers() return Vec\<DiffOp\>
 ```
 pub enum DiffOp {
     Add {
